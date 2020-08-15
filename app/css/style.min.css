@@ -4210,7 +4210,7 @@ body {
 }
 
 .portfolio {
-  background: url(../../img/portfolio/portfolio-bg.png) center center/cover no-repeat;
+  background: url(../img/portfolio/portfolio-bg.png) center center/cover no-repeat;
   padding: 110px 0 100px;
 }
 
