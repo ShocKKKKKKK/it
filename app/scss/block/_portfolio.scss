@@ -11,19 +11,46 @@
     margin-bottom: 75px;
   }
 
-  &__slider {}
 
-  &__item {}
+  &__logo {
+    margin-bottom: 35px;
+  }
 
-  &__img {}
-
-  &__wrapper {}
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
 
   &__target {}
 
-  &__caption {}
+  &__caption {
+    color: #05225d;
+    font-family: "Formular";
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 
-  &__text {}
+  &__text {
+    font-size: 14px;
+    line-height: 26px;
+  }
 
   &__completed {}
+
+  &__slider {}
+
+  &__item {
+    max-width: 535px;
+    height: 341px;
+    box-shadow: 50px 50px 100px rgba(255, 255, 255, 0.15);
+    background-color: #ffffff;
+    padding: 58px 47px 50px;
+    margin: 0 15px;
+  }
+}
+
+.slick-initialized .slick-slide {
+  // margin: 0 15px;
 }

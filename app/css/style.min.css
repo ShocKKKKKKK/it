@@ -4067,7 +4067,7 @@ body {
 }
 
 .services {
-  padding: 100px 0;
+  padding: 100px 0 145px;
   position: relative;
 }
 
@@ -4106,10 +4106,13 @@ body {
 
 .services__item {
   position: relative;
-  margin-bottom: 165px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.services__item:not(:last-child) {
+  margin-bottom: 165px;
 }
 
 .services__item:nth-child(even) .container {
@@ -4117,6 +4120,15 @@ body {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+
+.services__item:nth-child(even) .services__img {
+  margin-left: auto;
+}
+
+.services__item:nth-child(even) .services__box {
+  right: 0;
+  left: -40px;
 }
 
 .services__right {
@@ -4130,6 +4142,7 @@ body {
 }
 
 .services__box {
+  max-width: 453px;
   position: absolute;
   -webkit-box-shadow: 50px 50px 100px rgba(0,0,0,0.15);
           box-shadow: 50px 50px 100px rgba(0,0,0,0.15);
@@ -4159,6 +4172,8 @@ body {
 }
 
 .services__left {
+  position: relative;
+  z-index: 10;
   max-width: 475px;
 }
 
@@ -4206,6 +4221,43 @@ body {
   font-weight: 700;
   line-height: 70px;
   margin-bottom: 75px;
+}
+
+.portfolio__logo {
+  margin-bottom: 35px;
+}
+
+.portfolio__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.portfolio__caption {
+  color: #05225d;
+  font-family: "Formular";
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.portfolio__text {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.portfolio__item {
+  max-width: 535px;
+  height: 341px;
+  -webkit-box-shadow: 50px 50px 100px rgba(255,255,255,0.15);
+          box-shadow: 50px 50px 100px rgba(255,255,255,0.15);
+  background-color: #ffffff;
+  padding: 58px 47px 50px;
+  margin: 0 15px;
 }
 
 @media (prefers-reduced-motion: reduce), (print) {

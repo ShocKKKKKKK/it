@@ -1,5 +1,5 @@
 .services {
-  padding: 100px 0;
+  padding: 100px 0 145px;
   position: relative;
 
   &__title {
@@ -35,12 +35,24 @@
 
   &__item {
     position: relative;
-    margin-bottom: 165px;
     display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 165px;
+    }
 
     &:nth-child(even) {
       .container {
         flex-direction: row-reverse;
+      }
+
+      .services__img {
+        margin-left: auto;
+      }
+
+      .services__box {
+        right: 0;
+        left: -40px;
       }
 
     }
@@ -59,6 +71,7 @@
 
 
   &__box {
+    max-width: 453px;
     position: absolute;
     box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
@@ -87,6 +100,8 @@
   }
 
   &__left {
+    position: relative;
+    z-index: 10;
     max-width: 475px;
   }
 
@@ -122,5 +137,3 @@
     text-decoration: underline;
   }
 }
-
-.container {}
