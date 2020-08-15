@@ -1,6 +1,6 @@
-$(function(){
+$(function () {
+  $('.portfolio__slider').slick({});
 
 
 
-  
 });

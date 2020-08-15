@@ -1,0 +1,29 @@
+.portfolio {
+  background: url(../../img/portfolio/portfolio-bg.png) center center/cover no-repeat;
+  padding: 110px 0 100px;
+
+  &__title {
+    color: #ffffff;
+    font-family: "Formular - Bold";
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 70px;
+    margin-bottom: 75px;
+  }
+
+  &__slider {}
+
+  &__item {}
+
+  &__img {}
+
+  &__wrapper {}
+
+  &__target {}
+
+  &__caption {}
+
+  &__text {}
+
+  &__completed {}
+}
