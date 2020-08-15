@@ -4100,7 +4100,7 @@ body {
 
 .services__img {
   height: 100%;
-  width: 50%;
+  width: 51%;
   background: top/cover no-repeat;
 }
 
@@ -4250,6 +4250,17 @@ body {
   line-height: 26px;
 }
 
+.portfolio__look {
+  color: #f87060;
+  font-family: "Formular";
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.portfolio__look a {
+  text-decoration: underline;
+}
+
 .portfolio__item {
   max-width: 535px;
   height: 341px;
@@ -4257,7 +4268,31 @@ body {
           box-shadow: 50px 50px 100px rgba(255,255,255,0.15);
   background-color: #ffffff;
   padding: 58px 47px 50px;
-  margin: 0 15px;
+}
+
+.slick-slide {
+  width: 535px;
+  margin-right: 35px;
+}
+
+.slick-prev {
+  position: absolute;
+  top: 48%;
+  left: -60px;
+  -webkit-transform: translateY(-52%) rotate(-180deg);
+      -ms-transform: translateY(-52%) rotate(-180deg);
+          transform: translateY(-52%) rotate(-180deg);
+  cursor: pointer;
+}
+
+.slick-next {
+  position: absolute;
+  top: 48%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -60px;
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: reduce), (print) {
