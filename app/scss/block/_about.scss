@@ -1,0 +1,136 @@
+.about {
+  position: relative;
+  padding-top: 130px;
+
+  &__cost {
+    position: absolute;
+    padding-left: 75px;
+    top: -100px;
+    left: calc(50% - 556px);
+    box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 227px;
+
+  }
+
+  &__img {
+    margin-right: 70px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 85px;
+  }
+
+  &__right {
+    max-width: 500px;
+  }
+
+  &__title {
+    font-family: "Formular";
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 17px;
+    letter-spacing: -1.8px;
+    padding-top: 15px;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  &__box {
+    box-shadow: 0 100px 100px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    max-width: 476px;
+    min-height: 300px;
+    padding: 158px 16px 56px 36px;
+    margin-top: -125px;
+  }
+
+  &__box-text {
+    color: #4d533c;
+    font-size: 22px;
+    line-height: 40px;
+    font-style: italic;
+    margin-bottom: 59px;
+  }
+
+  &__box-info {
+    display: flex;
+    color: #4d533c;
+    padding-left: 6px;
+  }
+
+  &__box-photo {
+    margin-right: 30px;
+    width: 90px;
+    height: 90px;
+
+    img {
+      max-width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &__box-name {
+    font-family: "Formular";
+    font-size: 22px;
+    font-weight: 700;
+    padding-top: 9px;
+    margin-bottom: 15px;
+    letter-spacing: -1.4px;
+  }
+
+  &__box-position {
+    color: #152934;
+    font-family: Montserrat;
+    font-size: 16px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 85px;
+    border-bottom: 3px solid rgba(33, 56, 66, 0.1);
+  }
+
+  &__item {
+    max-width: 350px;
+    position: relative;
+    padding-left: 60px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url(../img/about-li.png) center center/cover no-repeat;
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  &__list-caption {
+    font-family: "Formular";
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 34px;
+    margin-bottom: 10px;
+    letter-spacing: -1.4px;
+  }
+
+  &__list-text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}

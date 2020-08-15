@@ -1,0 +1,14 @@
+.header {
+  top: 40px;
+  position: absolute;
+  width: 100%;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {}
+
+  &__menu {}
+}
