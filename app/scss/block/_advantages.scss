@@ -1,0 +1,40 @@
+.advantages {
+  padding: 100px 0 115px;
+
+  &__title {
+    color: #05225d;
+    font-family: "Formular";
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 73.2px;
+    margin-bottom: 48px;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    max-width: 839px;
+    margin: 0 auto 100px;
+  }
+
+  &__list {}
+
+  &__item {
+    margin-bottom: 100px;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    margin-right: 25px;
+  }
+
+  &__text {
+    line-height: 24px;
+  }
+}

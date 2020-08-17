@@ -47,7 +47,7 @@
 
     a {
       text-decoration: underline;
-      
+
     }
   }
 
@@ -59,12 +59,24 @@
     box-shadow: 50px 50px 100px rgba(255, 255, 255, 0.15);
     background-color: #ffffff;
     padding: 58px 47px 50px;
+
+    @media (max-width:1024px) {
+      max-width: 80%;
+      margin: 0 auto;
+      text-align: center;
+    }
   }
 }
 
 .slick-slide {
-  width: 535px;
+  max-width: 535px;
   margin-right: 35px;
+
+  @media (max-width:1024px) {
+    max-width: 80%;
+    margin-right: 0px;
+    margin: 0 auto;
+  }
 }
 
 .slick-prev {
@@ -81,4 +93,9 @@
   transform: translateY(-50%);
   right: -60px;
   cursor: pointer;
+}
+
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled {
+  opacity: 0.3;
 }
