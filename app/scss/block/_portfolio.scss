@@ -2,6 +2,10 @@
   background: url(../img/portfolio/portfolio-bg.png) center center/cover no-repeat;
   padding: 110px 0 100px;
 
+  @include tablets {
+    padding-top: 50px;
+  }
+
   &__title {
     color: #ffffff;
     font-family: "Formular";
@@ -16,6 +20,14 @@
       font-weight: 700;
       line-height: 36px;
       text-align: center;
+      margin-bottom: 20px;
+    }
+
+    @include tablets {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 32px;
+      margin-bottom: 23px;
     }
   }
 
@@ -23,6 +35,15 @@
   &__logo {
     margin-bottom: 35px;
 
+    @include desctop {
+      margin-bottom: 20px;
+    }
+
+    img {
+      @include desctop {
+        height: 23px;
+      }
+    }
 
   }
 
@@ -30,9 +51,17 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+
+    @include desctop {
+      flex-direction: column;
+    }
   }
 
-  &__target {}
+  &__target {
+    @include desctop {
+      margin-bottom: 20px;
+    }
+  }
 
   &__caption {
     color: #05225d;
@@ -40,11 +69,20 @@
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
+
+    @include desctop {
+      font-size: 12px;
+    }
   }
 
   &__text {
     font-size: 14px;
     line-height: 26px;
+
+    @include desctop {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 
   &__completed {}
@@ -70,15 +108,13 @@
     background-color: #ffffff;
     padding: 58px 47px 50px;
 
-    @media (max-width:1024px) {
-      max-width: 80%;
-      margin: 0 auto;
-      text-align: center;
-    }
-
     @include desctop {
       max-width: 286px;
       padding: 30px 20px;
+    }
+
+    @include tablets {
+      max-width: 480px;
     }
   }
 }
@@ -88,16 +124,23 @@
     max-width: 592px;
     margin: 0 auto;
   }
+
+  @include tablets {
+    max-width: 280px;
+  }
 }
 
 .slick-slide {
   max-width: 535px;
   margin-right: 35px;
 
-  @media (max-width:1024px) {
-    max-width: 80%;
-    margin-right: 0px;
-    margin: 0 auto;
+  @include desctop {
+    margin-right: 20px;
+  }
+
+  @include tablets {
+    width: 280px;
+    margin-right: 0;
   }
 }
 
@@ -107,6 +150,16 @@
   left: -60px;
   transform: translateY(-52%) rotate(-180deg);
   cursor: pointer;
+
+  @include phones {
+    bottom: -335px;
+    left: 0;
+
+    img {
+      width: 18px;
+      height: 29px;
+    }
+  }
 }
 
 .slick-next {
@@ -115,6 +168,17 @@
   transform: translateY(-50%);
   right: -60px;
   cursor: pointer;
+
+  @include phones {
+    left: 40px;
+    bottom: -84px;
+    top: auto;
+
+    img {
+      width: 18px;
+      height: 29px;
+    }
+  }
 }
 
 .slick-prev.slick-disabled,
