@@ -3,12 +3,32 @@
   position: absolute;
   width: 100%;
 
+  @include tablets {
+    top: 30px;
+  }
+
+  @include phones {
+    top: 20px;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
   }
 
-  &__logo {}
+  &__logo {
+    @include phones {
+      display: none;
+    }
+
+    &-mobile {
+      display: none;
+
+      @include phones {
+        display: block;
+      }
+    }
+  }
 
   &__menu {}
 }

@@ -1,5 +1,5 @@
 .certificate {
-  padding: 190px 0 80px;
+  padding: 193px 0 312px;
 
   &__title {
     font-size: 24px;
@@ -7,6 +7,15 @@
     max-width: 776px;
     margin: 0 auto;
     margin-bottom: 55px;
+    line-height: 40px;
+  }
+
+  &__item-small {
+    min-height: 476px;
+  }
+
+  &__item-big {
+    min-height: 433px;
   }
 
   &__small {

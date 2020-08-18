@@ -5,31 +5,100 @@
   display: flex;
   justify-content: flex-end;
   color: #ffffff;
+  min-height: 485px;
+
+  a {
+    color: inherit;
+  }
 
 
 
   &__contacts {
+    padding: 76px 0 91px;
     position: absolute;
-    top: -100px;
+    top: -233px;
     right: calc(50% - 556px);
     box-shadow: 50px 130px 100px rgba(0, 0, 0, 0.15);
     background-color: #fafafa;
+    color: rgba(33, 56, 66, 0.6);
     width: 100%;
-    height: 227px;
+    min-height: 423px;
+    z-index: 2;
 
     .container {
       margin-left: auto;
-      margin-right: 0;
+      margin-right: -11px;
     }
   }
 
-  &__contacts-caption {}
+  &__contacts-caption {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
 
-  &__contacts-text {}
+  &__contacts-text {
+    color: #05225d;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
 
   &__contacts-form {}
 
-  &__contacts-row {}
+  &__contacts-row {
+    display: flex;
+
+    input {
+      padding: 19px 12px;
+      background-color: #d8d8d8;
+      opacity: 0.4;
+      border: none;
+      margin-right: 22px;
+    }
+
+    button {
+      padding: 15px 43px;
+      border: none;
+      background-image: linear-gradient(153deg, #bb3a53 0%, #f87060 100%);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+
+      &:hover {
+        background-image: linear-gradient(153deg, #f87060 0%, #bb3a53 100%);
+      }
+    }
+
+  }
+
+  &__contacts-check {}
+
+  &__contacts-label {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    max-width: 550px;
+
+    &::before {
+      content: '';
+      display: flex;
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border: 2px solid #ececec;
+      margin-right: 20px;
+      vertical-align: middle;
+    }
+  }
+
+  &__contacts-checkbox {
+    display: none;
+
+    &:checked+label::before {
+      background-image: linear-gradient(153deg, #bb3a53 0%, #f87060 100%);
+    }
+  }
 
   &__top {
     padding-bottom: 30px;
@@ -60,7 +129,10 @@
     font-family: "Formular";
     font-size: 16px;
     font-weight: 700;
-    text-decoration: underline
+
+    a {
+      text-decoration: underline;
+    }
   }
 
   &__email {

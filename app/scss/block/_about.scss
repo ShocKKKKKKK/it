@@ -2,6 +2,10 @@
   position: relative;
   padding-top: 130px;
 
+  @include desctop {
+    padding-top: 0;
+  }
+
   &__cost {
     position: absolute;
     padding-left: 75px;
@@ -15,10 +19,31 @@
     width: 100%;
     height: 227px;
 
+    @include desctop {
+      position: relative;
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      padding: 44px;
+      height: 144px;
+    }
+
+    @include tablets {
+      height: 107px;
+      padding: 44px 33px;
+    }
   }
 
   &__img {
     margin-right: 70px;
+
+    @include desctop {
+      margin-right: 40px;
+    }
+
+    img {
+      max-width: 100%;
+    }
   }
 
   &__wrapper {
@@ -26,10 +51,22 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 85px;
+
+    @include tablets {
+      margin-bottom: 0px;
+    }
   }
 
   &__right {
-    max-width: 500px;
+    max-width: 400px;
+
+    @include desctop {
+      margin-right: 20px;
+    }
+
+    @include tablets {
+      display: none;
+    }
   }
 
   &__title {
@@ -39,11 +76,25 @@
     line-height: 40px;
     margin-bottom: 17px;
     padding-top: 15px;
+
+    @include desctop {
+      font-size: 28px;
+      line-height: 36px;
+    }
   }
 
   &__subtitle {
     font-size: 16px;
     line-height: 26px;
+
+    @include desctop {
+      min-width: 400px;
+    }
+
+    @include tablets {
+      font-size: 12px;
+      max-width: 340px;
+    }
   }
 
   &__box {
@@ -51,21 +102,37 @@
     background-color: #ffffff;
     max-width: 476px;
     min-height: 300px;
-    padding: 158px 16px 56px 36px;
+    padding: 162px 16px 56px 36px;
     margin-top: -125px;
+
+    @include desctop {
+      padding: 162px 6px 39px 24px;
+      max-width: 400px;
+    }
+
+    @include tablets {
+      padding-top: 122px;
+      max-width: 100%;
+      margin-top: -100px;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+    }
   }
 
   &__box-text {
-    color: #4d533c;
     font-size: 22px;
     line-height: 40px;
     font-style: italic;
     margin-bottom: 59px;
+
+    @include desctop {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 45px;
+    }
   }
 
   &__box-info {
     display: flex;
-    color: #4d533c;
     padding-left: 6px;
   }
 
@@ -73,6 +140,10 @@
     margin-right: 30px;
     width: 90px;
     height: 90px;
+
+    @include desctop {
+      margin-right: 15px;
+    }
 
     img {
       max-width: 100%;
@@ -84,8 +155,12 @@
     font-family: "Formular";
     font-size: 22px;
     font-weight: 700;
-    padding-top: 9px;
-    margin-bottom: 15px;
+    padding-top: 4px;
+    margin-bottom: 7px;
+
+    @include phones {
+      color: #05225d;
+    }
   }
 
   &__box-position {
@@ -100,10 +175,14 @@
     justify-content: space-between;
     padding-bottom: 85px;
     border-bottom: 3px solid rgba(33, 56, 66, 0.1);
+
+    @include tablets {
+      display: none;
+    }
   }
 
   &__item {
-    max-width: 350px;
+    width: 32%;
     position: relative;
     padding-left: 60px;
 
@@ -124,10 +203,18 @@
     font-weight: 700;
     line-height: 34px;
     margin-bottom: 10px;
+
+    @include desctop {
+      font-size: 16px;
+    }
   }
 
   &__list-text {
     font-size: 16px;
     line-height: 26px;
+
+    @include desctop {
+      font-size: 12px;
+    }
   }
 }

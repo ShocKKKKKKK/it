@@ -1,7 +1,15 @@
 .hero {
   background: url(../img/hero/Slider.jpg) center center/cover no-repeat;
   padding: 150px 0 140px;
-  min-height: 810px;
+
+  @include tablets {
+    padding: 97px 0 31px;
+  }
+
+  @include phones {
+    background: url(../img/hero/hero-mb-bg.jpg);
+    padding: 92px 0 62px;
+  }
 
   &__title {
     margin-top: -4px;
@@ -12,6 +20,11 @@
     font-weight: 700;
     line-height: 70px;
     margin-bottom: 12px;
+
+    @include tablets {
+      font-size: 28px;
+      line-height: 36px;
+    }
   }
 
   &__subtitle {
@@ -22,6 +35,13 @@
     max-width: 550px;
     margin-bottom: 26px;
     padding-left: 4px;
+
+    @include tablets {
+      font-size: 14px;
+      line-height: 22px;
+      max-width: 300px;
+      padding-left: 0;
+    }
   }
 
   &__advantages {
@@ -32,6 +52,10 @@
     margin-bottom: 54px;
     padding-left: 4px;
 
+    @include tablets {
+      margin-bottom: 15px;
+    }
+
     span {
       padding: 7px 15px;
       border-radius: 8px;
@@ -41,6 +65,17 @@
       font-weight: 700;
       text-transform: uppercase;
       margin: 0 9px 9px 0;
+
+      @include tablets {
+        font-size: 10px;
+      }
+
+      @include phones {
+        padding: 8px 12px;
+        font-size: 9px;
+        margin: 0 5px 5px 0;
+        font-weight: 700;
+      }
     }
   }
 
