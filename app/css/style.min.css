@@ -4589,11 +4589,6 @@ body {
 
 .certificate__small img {
   max-width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: content;
-     object-position: content;
-  height: 100%;
 }
 
 .footer {
@@ -5354,6 +5349,15 @@ body {
 
   .certificate__item-big a {
     height: 376px;
+  }
+
+  .certificate__small img {
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: content;
+       object-position: content;
+    height: 100%;
   }
 
   .certificate .slick-prev {
