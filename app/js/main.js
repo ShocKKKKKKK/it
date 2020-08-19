@@ -13,4 +13,30 @@ $(function () {
       }
     }]
   });
+  $('.licenses__box').slick({
+    slidesToShow: 1,
+    infinite: true,
+    arrows: true,
+    variableWidth: true,
+    nextArrow: '<div class="slick-arrow slick-next"><img src="img/licenses/arrow-sertificate-right.png"></div>',
+    prevArrow: '<div class="slick-arrow slick-prev"><img src="img/licenses/arrow-sertificate-left.png"></div>',
+    mobileFirst: true,
+    responsive: [{
+      breakpoint: 769,
+      settings: 'unslick'
+    }]
+  });
+  $('.certificate__small').slick({
+    slidesToShow: 1,
+    infinite: true,
+    arrows: true,
+    variableWidth: true,
+    nextArrow: '<div class="slick-arrow slick-next"><img src="img/licenses/arrow-sertificate-right.png"></div>',
+    prevArrow: '<div class="slick-arrow slick-prev"><img src="img/licenses/arrow-sertificate-left.png"></div>',
+    mobileFirst: true,
+    responsive: [{
+      breakpoint: 769,
+      settings: 'unslick'
+    }]
+  });
 });

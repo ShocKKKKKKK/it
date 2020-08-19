@@ -2,16 +2,22 @@
   background: url(../img/footer-bg.jpg) center center/cover no-repeat;
   position: relative;
   padding: 267px 0 30px;
-  display: flex;
-  justify-content: flex-end;
-  color: #ffffff;
   min-height: 485px;
+
+  @include desctop {
+    padding-top: 0;
+  }
 
   a {
     color: inherit;
   }
 
-
+  &__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    color: #ffffff;
+    margin-top: 20px;
+  }
 
   &__contacts {
     padding: 76px 0 91px;
@@ -25,15 +31,36 @@
     min-height: 423px;
     z-index: 2;
 
+    @include desctop {
+      padding: 40px 0;
+      min-height: 0;
+    }
+
     .container {
       margin-left: auto;
       margin-right: -11px;
+
+      @include desctop {
+        margin-right: auto;
+      }
+    }
+
+    @include desctop {
+      position: static;
+      right: 0;
     }
   }
 
   &__contacts-caption {
     font-size: 16px;
     margin-bottom: 4px;
+    max-width: 300px;
+
+    @include desctop {
+      font-size: 14px;
+      line-height: 22px;
+      max-width: 100%;
+    }
   }
 
   &__contacts-text {
@@ -41,6 +68,16 @@
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 25px;
+
+    @include desctop {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    @include tablets {
+      font-size: 23px;
+      line-height: 23px;
+    }
   }
 
   &__contacts-form {}
@@ -48,12 +85,31 @@
   &__contacts-row {
     display: flex;
 
+    @include desctop {
+      justify-content: space-between;
+    }
+
+    @include tablets {
+      flex-wrap: wrap;
+    }
+
     input {
       padding: 19px 12px;
       background-color: #d8d8d8;
       opacity: 0.4;
       border: none;
       margin-right: 22px;
+
+      @include desctop {
+        width: 23%;
+        font-size: 14px;
+      }
+
+      @include tablets {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0;
+      }
     }
 
     button {
@@ -64,11 +120,27 @@
       font-size: 16px;
       font-weight: 700;
 
+      @include desctop {
+        width: 23%;
+        font-size: 14px;
+      }
+
+      @include tablets {
+        width: 100%;
+        margin-top: 10px;
+      }
+
       &:hover {
         background-image: linear-gradient(153deg, #f87060 0%, #bb3a53 100%);
       }
     }
 
+  }
+
+  &__item {
+    @include tablets {
+      margin-bottom: 20px;
+    }
   }
 
   &__contacts-check {}
@@ -79,6 +151,12 @@
     display: flex;
     align-items: center;
     max-width: 550px;
+
+    @include desctop {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+    }
 
     &::before {
       content: '';
@@ -111,6 +189,11 @@
     letter-spacing: 0.88px;
     line-height: 40px;
     text-transform: uppercase;
+
+    @include desctop {
+      font-size: 12px;
+      letter-spacing: 0.75px;
+    }
   }
 
   &__address {
@@ -118,10 +201,24 @@
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 3px;
+
+    @include desctop {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 20px;
+      font-family: 'Montserrat', sans-serif;
+    }
   }
 
   &__phone {
     display: block;
+
+    @include desctop {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 20px;
+      font-family: 'Montserrat', sans-serif;
+    }
   }
 
   &__map {
@@ -129,6 +226,12 @@
     font-family: "Formular";
     font-size: 16px;
     font-weight: 700;
+
+    @include desctop {
+      font-size: 12px;
+      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+    }
 
     a {
       text-decoration: underline;
@@ -143,6 +246,13 @@
     a {
       text-decoration: underline;
       font-weight: 500;
+
+      @include desctop {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 24px;
+        font-family: 'Montserrat', sans-serif;
+      }
     }
   }
 
@@ -154,9 +264,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: start;
+    }
   }
 
-  &__logo {}
+  &__logo {
+    margin-right: 70px;
 
-  &__copy {}
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &__logo-phone {
+    display: none;
+
+    @include tablets {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__copy {
+    @include desctop {
+      font-size: 12px;
+    }
+  }
 }

@@ -1,6 +1,14 @@
 .certificate {
   padding: 193px 0 312px;
 
+  @include desctop {
+    padding: 161px 0 40px;
+  }
+
+  @include tablets {
+    padding: 161px 0 84px;
+  }
+
   &__title {
     font-size: 24px;
     text-align: center;
@@ -8,14 +16,96 @@
     margin: 0 auto;
     margin-bottom: 55px;
     line-height: 40px;
+
+    @include desctop {
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 430px;
+      margin-bottom: 22px;
+    }
   }
 
   &__item-small {
-    min-height: 476px;
+    a {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: background-color .3s ease;
+      }
+
+      &::before {
+        content: '';
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        background-image: url(../img/licenses/search.svg);
+        background-size: 100% 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
+
+      &:hover {
+        &::after {
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      @include tablets {
+        height: 376px;
+      }
+    }
   }
 
   &__item-big {
-    min-height: 433px;
+    a {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: background-color .3s ease;
+      }
+
+      &::before {
+        content: '';
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        background-image: url(../img/licenses/search.svg);
+        background-size: 100% 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
+
+      &:hover {
+        &::after {
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      @include tablets {
+        height: 376px;
+      }
+    }
+
   }
 
   &__small {
@@ -23,12 +113,37 @@
 
     img {
       max-width: 100%;
+      object-fit: cover;
+      object-position: content;
+      height: 100%;
     }
   }
 
-  &__big {
-    img {
-      max-width: 100%;
+  .slick-prev {
+    @include tablets {
+      position: absolute;
+      bottom: -45px;
+      top: auto;
+      left: 50%;
+      transform: translateX(-30px);
+      cursor: pointer;
+      z-index: 1000;
+    }
+  }
+
+  .slick-next {
+    @include tablets {
+      position: absolute;
+      bottom: -45px;
+      top: auto;
+      right: 50%;
+      transform: translateX(30px);
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    @include phones {
+      left: auto;
     }
   }
 }
